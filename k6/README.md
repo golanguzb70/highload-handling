@@ -23,7 +23,7 @@ Here is [documentation]() to install k6.
 Load Testing is a type of Performance Testing that determines the performance of a system, software product, or software application under real-life based load conditions. Basically, load testing determines the behavior of the application when multiple users use it at the same time.
 
 
-See example of load testing here.
+See example of load testing [here.](https://github.com/golanguzb70/highload-handling/tree/main/k6/load)
 
 
 
