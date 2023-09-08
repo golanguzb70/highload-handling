@@ -15,15 +15,19 @@ Here is [documentation]() to install k6.
 
 # 4 types of performance testing. 
 1. Load testing
-2. Spike testing
-3. Stress testing
+2. Stress testing
+3. Spike testing
 4. Soak testing
 
 # Load testing
 Load Testing is a type of Performance Testing that determines the performance of a system, software product, or software application under real-life based load conditions. Basically, load testing determines the behavior of the application when multiple users use it at the same time.
 
-
 See example of load testing [here.](https://github.com/golanguzb70/highload-handling/tree/main/k6/load)
 
+# Stress testing
+Stress testing is defined as a type of software testing that verifies the stability and reliability of the system. This test particularly determines the system on its robustness and error handling under extremely heavy load conditions.
 
+Read more about Stress testing [here](https://www.geeksforgeeks.org/stress-testing-software-testing/)
 
+See example of stress test here
+# Soak testing
