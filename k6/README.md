@@ -29,5 +29,5 @@ Stress testing is defined as a type of software testing that verifies the stabil
 
 Read more about Stress testing [here](https://www.geeksforgeeks.org/stress-testing-software-testing/)
 
-See example of stress test here
+See example of stress test [here](https://github.com/golanguzb70/highload-handling/tree/main/k6/stress)
 # Soak testing
