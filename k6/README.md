@@ -35,7 +35,14 @@ Run a load test to:
 See example of load testing [here.](https://github.com/golanguzb70/highload-handling/tree/main/k6/load)
 
 # Stress testing
-Stress testing is defined as a type of software testing that verifies the stability and reliability of the system. This test particularly determines the system on its robustness and error handling under extremely heavy load conditions.
+Stress testing is a type of performance testing used to determine the limits of the system.
+The purpose of this test is to verify the stability and reliabality of the system under extreme contitions.
+
+Run a stress test to: 
+    - Determine how your system will behave under extreme contitions
+    - Determine what is the maximum capacity of your system in terms of users or throughput
+    - Determine the breaking point of your system and its failure mode
+    - Determine if your system will recover whithout manual intervention after the stress test is over
 
 Read more about Stress testing [here](https://www.geeksforgeeks.org/stress-testing-software-testing/)
 
@@ -56,3 +63,20 @@ Success is based on expectation. System will genereally react in 1 of 4 ways
       All requests are handled.
     - Poor: System produces error during the surge of traffic, but recovers to normal after the traffic subsided.
     - Bad: System crashes, and does not recover after the traffic has subsided.
+
+# Soak testing
+Soak testing is used to validate reliability of the system over a long time
+
+Run soak test to: 
+    - Verify that your system doesn't suffer from bugs or memory leaks, which result in a crash or restart.
+    - Verify that expected application restarts don't lose requests
+    - Find bugs related to race conditions that appear sporadically
+    - Make sure yuor database doesn't exhause the alloted storage space and stops
+    - Make sure your logs don't exhaust the  allotted disk storage
+    - Make sure the external services you depend on don't stop wroking after a certain amount  of requests.
+
+How to run a soak test: 
+    - Determine the maximum amount of users your system can handle
+    - Get the 75-80% of thet value
+    - Set VUs to that value
+    - Run the test in 3 stages. Rupm up to the VUs, stay there for 4-12 hours, rump down to 0.
