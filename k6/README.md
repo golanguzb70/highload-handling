@@ -28,11 +28,8 @@ When you want to understand if your system is meeting the performance goals,  th
 you'll run.
 
 Run a load test to: 
-    - Access the current performance of your system under typical and peak load.
-    - Make sure your are continuously meeting the performance standards as you make changes to your system
-
-    Can be used to simulate a normal day in you business
-
+- Access the current performance of your system under typical and peak load.
+- Make sure your are continuously meeting the performance standards as you make changes to your system
 
 See example of load testing [here.](https://github.com/golanguzb70/highload-handling/tree/main/k6/load)
 
@@ -55,30 +52,29 @@ receives a sudden and extreme increase or decrease in load. The goal of spike te
 to determine the behavior of a software application when it receives extreme variations in traffic.
 
 Run a spike test to: 
-    - Determine how your system will perform under a sudden surge of traffic 
-    - Determine if your system will recover once the traffic has subsided
+- Determine how your system will perform under a sudden surge of traffic 
+- Determine if your system will recover once the traffic has subsided
 
 Success is based on expectation. System will genereally react in 1 of 4 ways 
-    - Excellent: system performance is not degraded during the surge of traffic. 
-      Response time is similar during low traffic and high traffic.
-    - Good: Response time is slower, but the system does not produce any errors.
-      All requests are handled.
-    - Poor: System produces error during the surge of traffic, but recovers to normal after the traffic subsided.
-    - Bad: System crashes, and does not recover after the traffic has subsided.
+- Excellent: system performance is not degraded during the surge of traffic. 
+Response time is similar during low traffic and high traffic.
+- Good: Response time is slower, but the system does not produce any errors.  All requests are handled.
+- Poor: System produces error during the surge of traffic, but recovers to normal after the traffic subsided.
+- Bad: System crashes, and does not recover after the traffic has subsided.
 
 # Soak testing
 Soak testing is used to validate reliability of the system over a long time
 
 Run soak test to: 
-    - Verify that your system doesn't suffer from bugs or memory leaks, which result in a crash or restart.
-    - Verify that expected application restarts don't lose requests
-    - Find bugs related to race conditions that appear sporadically
-    - Make sure yuor database doesn't exhause the alloted storage space and stops
-    - Make sure your logs don't exhaust the  allotted disk storage
-    - Make sure the external services you depend on don't stop wroking after a certain amount  of requests.
+- Verify that your system doesn't suffer from bugs or memory leaks, which result in a crash or restart.
+- Verify that expected application restarts don't lose requests
+- Find bugs related to race conditions that appear sporadically
+- Make sure yuor database doesn't exhause the alloted storage space and stops
+- Make sure your logs don't exhaust the  allotted disk storage
+- Make sure the external services you depend on don't stop wroking after a certain amount  of requests.
 
 How to run a soak test: 
-    - Determine the maximum amount of users your system can handle
-    - Get the 75-80% of thet value
-    - Set VUs to that value
-    - Run the test in 3 stages. Rupm up to the VUs, stay there for 4-12 hours, rump down to 0.
+- Determine the maximum amount of users your system can handle
+- Get the 75-80% of thet value
+- Set VUs to that value
+- Run the test in 3 stages. Rupm up to the VUs, stay there for 4-12 hours, rump down to 0.
