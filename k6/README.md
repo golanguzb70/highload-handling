@@ -19,6 +19,8 @@ Here is [documentation]() to install k6.
 3. Spike testing
 4. Soak testing
 
+![perfomace testing](https://media.geeksforgeeks.org/wp-content/uploads/20190607143956/226.jpg)
+
 # Load testing
 Load Testing is primarily concerned with assessing the current performance of your system
 in terms of concurrent users or requests per second.
