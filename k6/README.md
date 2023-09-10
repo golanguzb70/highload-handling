@@ -30,4 +30,19 @@ Stress testing is defined as a type of software testing that verifies the stabil
 Read more about Stress testing [here](https://www.geeksforgeeks.org/stress-testing-software-testing/)
 
 See example of stress test [here](https://github.com/golanguzb70/highload-handling/tree/main/k6/stress)
-# Soak testing
+# Spike testing
+    Spike testing is a type of performance testing in which an application 
+    receives a sudden and extreme increase or decrease in load. The goal of spike testing is 
+    to determine the behavior of a software application when it receives extreme variations in traffic.
+
+    Run a spike test to: 
+     - Determine how your system will perform under a sudden surge of traffic 
+     - Determine if your system will recover once the traffic has subsided
+
+    Success is based on expectation. System will genereally react in 1 of 4 ways 
+     - Excellent: system performance is not degraded during the surge of traffic. 
+       Response time is similar during low traffic and high traffic.
+     - Good: Response time is slower, but the system does not produce any errors.
+       All requests are handled.
+     - Poor: System produces error during the surge of traffic, but recovers to normal after the traffic subsided.
+     - Bad: System crashes, and does not recover after the traffic has subsided.
