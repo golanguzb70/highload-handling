@@ -40,11 +40,11 @@ See example of load testing [here.](https://github.com/golanguzb70/highload-hand
 Stress testing is a type of performance testing used to determine the limits of the system.
 The purpose of this test is to verify the stability and reliabality of the system under extreme contitions.
 
-Run a stress test to: 
-    - Determine how your system will behave under extreme contitions
-    - Determine what is the maximum capacity of your system in terms of users or throughput
-    - Determine the breaking point of your system and its failure mode
-    - Determine if your system will recover whithout manual intervention after the stress test is over
+Run a stress test to:
+- Determine how your system will behave under extreme contitions
+- Determine what is the maximum capacity of your system in terms of users or throughput
+- Determine the breaking point of your system and its failure mode
+- Determine if your system will recover whithout manual intervention after the stress test is over
 
 Read more about Stress testing [here](https://www.geeksforgeeks.org/stress-testing-software-testing/)
 
