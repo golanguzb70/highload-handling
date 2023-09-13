@@ -14,12 +14,30 @@ Read more about K6 [here](https://k6.io/docs/)
 Here is [documentation]() to install k6.
 
 # 4 types of performance testing. 
-1. Load testing
-2. Stress testing
-3. Spike testing
-4. Soak testing
+1. Smoke testing
+2. Load testing
+3. Stress testing
+4. Spike testing
+5. Soak testing
+6. Breakpoint testing
 
 ![perfomace testing](https://media.geeksforgeeks.org/wp-content/uploads/20190607143956/226.jpg)
+
+
+# Smoke testing
+Smoke tests have a minimal load. Run them to verify that the system works well under minimal load and to 
+gather baseline performance values.
+
+This test type consists of running tests with a few VUs — more than 5 VUs could be considered a mini-load test.
+
+Similarly, the test should execute for a short period, either a low number of iterations or a duration 
+from seconds to a few minutes maximum.
+
+It's a good practice to run a smoke test as a first step, with the following goals:
+- Verify that your test script doesn't have errors.
+- Verify that your system doesn't throw any errors (performance or system related) when under minimal load.
+- Gather baseline performance metrics of your system’s response under minimal load.
+- With simple logic, to serve as a synthetic test to monitor the performance and availability of production environments.
 
 # Load testing
 Load Testing is primarily concerned with assessing the current performance of your system
@@ -78,3 +96,20 @@ How to run a soak test:
 - Get the 75-80% of thet value
 - Set VUs to that value
 - Run the test in 3 stages. Rump up to the VUs, stay there for 4-12 hours, rump down to 0.
+
+# Breakpoint testing
+Breakpoint testing aims to find system limits. Reasons you might want to know the limits include:
+
+    - To tune or care for the system's weak spots to relocate those higher limits at higher levels.
+    - To help plan remediation steps in those cases and prepare for when the system nears those limits.
+    
+In other words, knowing where and how a system starts to fail helps prepare for such limits.
+
+A breakpoint ramps to unrealistically high numbers. This test commonly has to be stopped manually or automatically 
+as thresholds start to fail. When these problems appear, the system has reached its limits.
+
+Teams execute a breakpoint test whenever they must know their system's diverse limits. Some conditions that may warrant a breakpoint 
+test include the following:
+- The need to know if the system's load expects to grow continuously
+- If current resource consumption is considered high
+- After significant changes to the code-base or infrastructure.
