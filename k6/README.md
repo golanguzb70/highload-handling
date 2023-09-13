@@ -77,4 +77,4 @@ How to run a soak test:
 - Determine the maximum amount of users your system can handle
 - Get the 75-80% of thet value
 - Set VUs to that value
-- Run the test in 3 stages. Rupm up to the VUs, stay there for 4-12 hours, rump down to 0.
+- Run the test in 3 stages. Rump up to the VUs, stay there for 4-12 hours, rump down to 0.

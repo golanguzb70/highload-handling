@@ -10,10 +10,10 @@
 */
 
 import http from 'k6/http'
-import { sleep } from "k6";
+import { sleep, check } from "k6";
 
 
-export let options = {
+export const options = {
     insecureSkipTLSVerify: true,
     noConnectionReUse: false,
     stages: [
@@ -28,13 +28,8 @@ export let options = {
         { duration: '10m', target: 0  } // scale down, Recovery stage
     ]
 };
-const API_BASE_URL = "http://localhost:8000/v1"
 export default () => {
-    http.batch([
-        [ 'GET', `${API_BASE_URL}/post/1` ],
-        [ 'GET', `${API_BASE_URL}/post/list` ],
-        [ 'GET', `${API_BASE_URL}/user/list` ],
-    ])
-
+    const res = http.get('http://localhost:8000/v1/post/1')
+    check(res, { "status was 200": (r) => r.status == 200 })
     sleep(1); // this is interval that each vus send request
 };

@@ -31,7 +31,7 @@ export let options = {
 };
 
 export default () => {
-    let res = http.get('http://localhost:8000/v1/post/1')
+    const res = http.get('http://localhost:8000/v1/post/1')
     check(res, { "status was 200": (r) => r.status == 200 })
     sleep(1); // this is interval that each vus send request
 };
